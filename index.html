@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Islam Mohamed Alsayed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --med-blue: #0056b3;
+            --tech-teal: #1abc9c;
+            --bg-light: #f4f7f9;
+            --text-main: #2c3e50;
+        }
+
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            color: var(--text-main); 
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav .logo { font-weight: 700; color: var(--med-blue); font-size: 1.2rem; }
+        nav ul { list-style: none; display: flex; margin: 0; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { text-decoration: none; color: var(--text-main); font-weight: 500; transition: 0.3s; }
+        nav ul li a:hover { color: var(--med-blue); }
+
+        /* Hero Section */
+        #hero {
+            padding: 80px 10%;
+            background: white;
+            text-align: center;
+            border-bottom: 1px solid #e1e8ed;
+        }
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--med-blue);
+            margin-bottom: 20px;
+        }
+        #hero h1 { font-size: 2.5rem; margin: 10px 0; font-weight: 700; }
+        .badge-container { margin-top: 15px; }
+        .badge {
+            background: #e1f0ff;
+            color: var(--med-blue);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        /* Section Styling */
+        section { padding: 60px 10%; }
+        .section-title { 
+            text-align: center; 
+            margin-bottom: 40px; 
+            font-size: 2rem; 
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background: var(--med-blue);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Project Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card-img { width: 100%; height: 200px; background: #eee; object-fit: cover; }
+        .card-content { padding: 25px; }
+        .card-tag { color: var(--tech-teal); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+        .card h3 { margin: 10px 0; font-size: 1.3rem; }
+        .card p { font-size: 0.95rem; color: #666; }
+        .figma-btn {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--med-blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Achievements/Courses List */
+        .achievement-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            border-left: 5px solid var(--med-blue);
+        }
+        .achievement-icon { font-size: 1.5rem; margin-right: 20px; }
+
+        /* Skills */
+        .skills-wrap { text-align: center; }
+        .skill-chip {
+            display: inline-block;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            font-weight: 500;
+        }
+
+        /* Contact Section Specific */
+        #contact { text-align: center; background: white; }
+        .contact-info { font-size: 1.1rem; margin: 10px 0; }
+        .closing-words { 
+            max-width: 700px; 
+            margin: 40px auto 0; 
+            font-style: italic; 
+            color: #555; 
+            font-size: 1.2rem;
+        }
+
+        footer { text-align: center; padding: 40px; color: #999; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Medical & Tech Portfolio</div>
+        <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <img src="Personal Photo.jpg" alt="Profile" class="profile-img">
+        <h1>Medical Innovator</h1>
+        <p>Passionate about medicine to improve healthcare</p>
+        <div class="badge-container">
+            <span class="badge">Future Doctor</span>
+            <span class="badge">Scientific Researcher</span>
+            <span class="badge">Healthcare Innovator</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Some projects I did during high school</h2>
+        <div class="grid" id="project-container">
+            </div>
+    </section>
+
+    <section id="achievements">
+        <h2 class="section-title">Competitions & Volunteering</h2>
+        <div id="achievement-container">
+            </div>
+    </section>
+
+    <section id="courses">
+        <h2 class="section-title">Courses Taken</h2>
+        <div id="courses-container">
+            <div class="achievement-item">
+                <div class="achievement-icon">📚</div>
+                <div>
+                    <strong>First Aid course</strong><br>
+                    <small>The course discusses how to act in emergency situations and accidents of all kinds: cardiac arrest and breathing, suffocation or choking, disturbance or change in the degree of consciousness, burns, fractures, wounds and bleeding, the course emphasized that, by acquiring these skills, the trainee could help the injured to prevent death or complications and not act as a substitute for the physician.</small>
+                </div>
+            </div>
+            <div class="achievement-item">
+                <div class="achievement-icon">💻</div>
+                <div>
+                    <strong>Scientific Research course</strong><br>
+                    <small>I have successfully earned a Level Completion Certificate from Edraak and Amman Arab University for the course "Scientific Research Methods." Through this program, I gained a solid understanding of the theoretical and philosophical foundations of research, as well as the various curricula used across different scientific fields. I mastered the essential stages of the research process, from identifying and analyzing problems to formulating hypotheses and using specific tools for data collection. This achievement reflects four hours of interactive training completed on August 26, 2023, and I applied what I learned in this program to my scientific research mentioned above.</small>
+                </div>
+            </div>
+                        <div class="achievement-item">
+                <div class="achievement-icon">💻</div>
+                <div>
+                    <strong>Some courses in Programming</strong><br>
+                    <small>I have completed Arduino course and C++ Fundamentals courses from Elzero Channel and CS50, and afterward, I continued my learning by working on projects.</small>
+                </div>
+            </div>
+
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Core Skills</h2>
+        <div class="skills-wrap" id="skills-container">
+            </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Information</h2>
+        <div class="contact-info">
+            <p>📧 <strong>Email:</strong> IslamAlsayed86@gmail.com</p>
+            <p>📍 <strong>Location:</strong> Egypt / Qena</p>
+        </div>
+
+        <div class="closing-words">
+            I am passionate about becoming a doctor while also loving programming. I believe medicine and technology can work together to improve healthcare and create innovative solutions. Just like Dr. Eric Topol, who combines medical expertise with digital innovation, I aim to integrate programming into medical research and healthcare development to create tools that make a real difference in people’s lives. I plan to enroll in medical school while continuing my self-directed learning in programming, achieving this blend of medicine and technology.
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Portfolio for Medical School Application</p>
+    </footer>
+
+    <script>
+        // PROJECT DATA
+        const myProjects = [
+            {
+                title: "Medical Companion Robot",
+                tag: "Clinical Research / AI",
+                desc: "This is a robot that measures multiple health parameters in the body using over 10 sensors, providing comprehensive data on the patient’s condition along with medical consultations through an AI-powered application with a robust database. It integrates medicine and programming seamlessly. I also conducted a scientific study on how gases exhaled from the mouth can indicate a wide range of diseases. The research is ongoing and currently covers more than 40 conditions.",
+                figma: "https://zip-campus-88184809.figma.site/", // Replace with your Figma link
+                img: "photo_2025-09-10_17-32-30.jpg"
+            },
+            {
+                title: "ISG Agriculture Project",
+                tag: "Sustainable Health",
+                desc: "Agricultural project I developed to improve agriculture in Egypt, because if agriculture advances and produces better crops, public health in Egypt will also improve. This project consists of:\n\nHardware component: a set of sensors that measure multiple parameters, accompanied by a small guidebook that tells farmers what actions to take based on the readings.\n\nSoftware component: a discussion platform where farmers can share their opinions and benefit from each other’s expertise.\n\nImaging component: capturing images of the plants and sending them to an AI model on the platform, which provides agricultural advice.\n\nBy enhancing agriculture in this way, public health can also improve.",
+                figma: "https://bobbin-tall-07207025.figma.site/", // Replace with your Figma link
+                img: "Hardware part of S project.png"
+            },
+        ];
+
+        // ACHIEVEMENT DATA
+        const myAchievements = [
+    { 
+        icon: "🏆", 
+        title: "Conrad Challenge", 
+        detail: "Participated in a project utilizing industrial waste. Passed two stages, but could not continue due to financial constraints for traveling.",
+    },
+    { 
+        icon: "🌊", 
+        title: "Nile Competition", 
+        detail: "Participated with the project 'Carpon Capture and Storage'.",
+        image: "D:\\I will Get out of Egypt\\UGRF Certificates.jpg" 
+    },
+    { 
+        icon: "🤝", 
+        title: "Knowledge Planet (OC)", 
+        detail: "3-month volunteer work organizing and marketing an event about programming, scholarships, studying abroad, and the job market.",
+        image: "D:\\I will Get out of Egypt\\Knowledge Planet team.png" 
+    }
+];
+
+
+
+        // SKILLS DATA
+        const mySkills = ["Scientific Research", "Programming", "Medicine", "Software Engineering", "healthcare", "Hardware"];
+
+        // RENDER LOGIC
+        function init() {
+            // Render Projects
+            const projGrid = document.getElementById('project-container');
+            myProjects.forEach(p => {
+                projGrid.innerHTML += `
+                    <div class="card">
+                        <img src="${p.img}" class="card-img" alt="${p.title}">
+                        <div class="card-content">
+                            <span class="card-tag">${p.tag}</span>
+                            <h3>${p.title}</h3>
+                            <p>${p.desc}</p>
+                            ${p.figma ? `<a href="${p.figma}" target="_blank" class="figma-btn">View Figma UI →</a>` : ''}
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Render Achievements
+            const achContainer = document.getElementById('achievement-container');
+            myAchievements.forEach(a => {
+                achContainer.innerHTML += `
+                    <div class="achievement-item">
+                        <div class="achievement-icon">${a.icon}</div>
+                        <div>
+                            <strong>${a.title}</strong><br>
+                            <small>${a.detail}</small>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Render Skills
+            const skillContainer = document.getElementById('skills-container');
+            mySkills.forEach(s => {
+                skillContainer.innerHTML += `<div class="skill-chip">${s}</div>`;
+            });
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
